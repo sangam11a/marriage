@@ -1,0 +1,18 @@
+% Table 2: Formal Paired Hypothesis Testing
+\begin{table*}[t]
+\centering
+\caption{Paired Deal-Level Non-Parametric Hypothesis Testing ($10{,}000$ Bootstrap Resamples, Holm-Bonferroni Family-Wise Correction).}
+\label{tab:hypothesis_testing}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Pairwise Matchup} & \textbf{Mean $\Delta$ (Coins/Rnd)} & \textbf{95\% Bootstrap CI} & \textbf{Permutation $p$} & \textbf{Holm-Adj $p$} & \textbf{Verdict} \\
+\midrule
+Expert-CardCounter vs. Heuristic-Tuned & $+4.50$ & $[+4.05, +4.97]$ & $0.0001$ & $0.0005$ & \textbf{Significant} \\
+Expert-CardCounter vs. Random          & $+24.77$ & $[+24.12, +25.41]$ & $0.0001$ & $0.0005$ & \textbf{Significant} \\
+Heuristic-Tuned vs. Random             & $+20.27$ & $[+19.65, +20.91]$ & $0.0001$ & $0.0005$ & \textbf{Significant} \\
+Masked-PPO vs. Random                  & $+4.76$ & $[+4.15, +5.38]$ & $0.0002$ & $0.0005$ & \textbf{Significant} \\
+Expert-CardCounter vs. Masked-PPO      & $+20.01$ & $[+19.38, +20.65]$ & $0.0001$ & $0.0005$ & \textbf{Significant} \\
+\bottomrule
+\end{tabular}
+\end{table*}

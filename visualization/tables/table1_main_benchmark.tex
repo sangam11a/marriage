@@ -1,0 +1,17 @@
+% Table 1: Main Benchmark on Duplicate Deals
+\begin{table*}[t]
+\centering
+\caption{Main Performance Benchmark over $N = 5,120$ Duplicate Deals ($20,480$ Rotated Rounds).}
+\label{tab:main_benchmark}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Agent Policy} & \textbf{Coins / Round} & \textbf{Win Rate (\%)} & \textbf{Seen Rate (\%)} & \textbf{Mean Turns} & \textbf{Illegal Actions} & \textbf{Sum-to-Zero} \\
+\midrule
+Random                 & $-12.45$ & $0.0\%$ & $38.5\%$ & $56.4$ & $0$ & $\checkmark$ \\
+Heuristic-Tuned        & $+7.82$ & $19.8\%$ & $86.2\%$ & $47.1$ & $0$ & $\checkmark$ \\
+Expert-CardCounter     & $+12.32$ & $28.4\%$ & $81.4\%$ & $44.8$ & $0$ & $\checkmark$ \\
+Masked-PPO             & $-7.69$ & $2.1\%$ & $54.2\%$ & $53.2$ & $0$ & $\checkmark$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

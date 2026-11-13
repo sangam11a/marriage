@@ -1,0 +1,16 @@
+% Table 3: Representation Architectures Ablation
+\begin{table}[t]
+\centering
+\caption{Capacity-Matched Representation Model Parameter Counts and Invariance Properties.}
+\label{tab:models}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model Family} & \textbf{Input Representation} & \textbf{Parameters} & \textbf{Symmetry Guarantee} & \textbf{Inference Latency} \\
+\midrule
+Flat MLP Baseline & 275-dim Histogram & 340,988 & Invariant (Trivial) & 0.18 ms \\
+DeepSets Hand Encoder & $M \times 19$-dim Multiset & 310,284 & Permutation Invariant & 0.32 ms \\
+Relational GNN (R-GCN) & 53 Nodes, 4 Edge Types & 291,756 & Graph Equivariant & 0.58 ms \\
+\bottomrule
+\end{tabular}
+\end{table}
