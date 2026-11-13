@@ -23,7 +23,7 @@ class DeepMonteCarloAgent(BaseAgent):
         device: Optional[torch.device] = None,
     ):
         super().__init__(name=name)
-        self.device = device if device is not None else torch.device("cpu")
+        self.device = device if device is not None else torch.device("cuda" if torch.cuda.is_available() else "cpu")
         # Uses capacity-matched FlatMLP Q-network
         self.q_net = FlatMLP().to(self.device)
 

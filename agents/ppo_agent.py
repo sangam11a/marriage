@@ -72,7 +72,7 @@ class MaskedPPOAgent(BaseAgent):
         device: Optional[torch.device] = None,
     ):
         super().__init__(name=name)
-        self.device = device if device is not None else torch.device("cpu")
+        self.device = device if device is not None else torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.backbone_type = backbone_type
         self.clip_ratio = clip_ratio
         self.entropy_coef = entropy_coef
